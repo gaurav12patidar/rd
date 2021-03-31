@@ -1,0 +1,142 @@
+<div class="body">
+    <div class="d-flex justify-content-center" >
+       <div style="background-color: blanchedalmond;padding: 5%;margin-top: 5vh;border-radius: 2%;border-right:solid 3px gold;border-bottom:3px solid gold ;"> <form [formGroup]="getdataform" (ngSubmit)="search(getdataform.value)">
+            <label>
+              Scholar Id :  </label><br>
+              <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': getdataform.get('id').touched && getdataform.get('id').invalid }" class="form-control" placeholder="Scholar Id" >
+              <div class="invalid-feedback"> <div>Id Required </div></div>
+                        <br>      
+            <button class="btn btn-primary">Submit</button>
+            <p *ngIf="cred" style="color: red;">Invalid Credentials</p>
+            </form>
+        </div>
+    </div>
+    <div class="data" id="data" *ngIf="active">
+        <h1 class="text-center" id="heading">Student Data</h1><br><br>
+         <div style="width: 100%;padding-left: 2%;"> 
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                 <h5  class="heading"><strong class="strong-heading"> Name:</strong> {{name}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Age:</strong> {{age}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Address:</strong> {{add}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Date Of Birth:</strong> {{dob}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Father's Name:</strong> {{father}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Mother's Name:</strong> {{mother}}</h5>
+                 
+                </div>
+                <div class="col-12 col-sm-6">
+                 <h5  class="heading"><strong class="strong-heading"> Phone Number:</strong> {{phone}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Scholar Number:</strong> {{scholarno}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Year Of Joining:</strong> {{yoj}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Transfer Certificate:</strong> <a href="{{pod}}">Click Here</a></h5>
+                 <h5  class="heading"><strong class="strong-heading"> Status:</strong> {{status}}</h5>
+                 <h5  class="heading"><strong class="strong-heading"> Amount Status:</strong> {{amountstatus}}</h5>
+                </div>
+            </div>
+     </div>
+     <br>
+    
+    <br><br><br>
+    <h3 class="text-center" id="heading">
+        Previous Years Report
+    </h3>
+    <br><br>
+    <!--Accordian          ////////////////////////////////-->
+   <div class="d-flex justify-content-center" >
+        <div style="background-color: rgba(245, 242, 237, 0.842);width: 50%; ">
+    <div class="accordion" id="accordionExample" *ngFor="let x of y" style="width: 100%;">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              {{x.year}}
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <h5> Class: {{x.class}} </h5>
+                <h5> Year: {{x.year}} </h5>
+                <h5> Roll Number: {{x.rollno}} </h5>
+                <h5> Percentage: {{x.percentage}} </h5>
+                <h5> Report Card: <a href="{{x.reportcardurl}}">Click Here</a> </h5>
+                 </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div *ngIf="student">
+    <h1 class="text-center" id="heading">Installment And Fees Details</h1>
+
+    <div class="d-flex justify-content-center">
+    <form [formGroup]="getCashFlowForm" (ngSubmit)="getcashFlow(getCashFlowForm.value.clas)">
+      <label class="strong-heading"> Enter Class :  </label><br><br>
+          <input type="text" formControlName="clas" [ngClass]="{ 'is-invalid': getCashFlowForm.get('clas').touched && getCashFlowForm.get('clas').invalid }" class="form-control" placeholder="Enter Class" >
+          <div class="invalid-feedback"> <div>Class Required </div></div>
+      <br>
+      <button class="btn btn-primary">Submit</button>
+     </form>
+    </div>
+    <br><br>
+    <div class="d-flex justify-content-center">
+      <div>
+      <div *ngFor="let x of jsonObj" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; max-width: 70vw;">
+        <h5  class="heading"><strong class="strong-heading"> Date : </strong> {{x.date}}</h5>
+        <h5  class="heading"><strong class="strong-heading"> Amount : </strong> {{x.amount}}</h5>
+        <h5  class="heading"><strong class="strong-heading"> Reciept No : </strong> {{x.recieptno}}</h5>
+        <hr style="height: 5px;">
+      </div>
+    </div>
+    <p style="color: red;" *ngIf="found"> * Data Not Found</p>
+    </div>
+    <br><br><br>
+  </div>
+  <div *ngIf="teacher">
+    <h1 class="text-center" id="heading">Salary And Cashflow</h1><br><br>
+        
+    <div class="d-flex justify-content-center">
+      <form [formGroup]="cashflowForm" (ngSubmit)="getcashFlowifTeacher(cashflowForm.value.month)">
+        <label class="strong-heading">Month :</label><br>
+        <select formControlName="month" [ngClass]="{ 'is-invalid': cashflowForm.get('month').touched && cashflowForm.get('month').invalid }" >
+          <option value="january">January</option>
+          <option value="feburary">Feburary</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+    
+        </select>
+        <br>
+        <label class="strong-heading">Year :</label><br>
+    
+        <input type="number" formControlName="year" [ngClass]="{ 'is-invalid': cashflowForm.get('year').touched && cashflowForm.get('year').invalid }" class="form-control" placeholder="Enter Year " >
+        
+        <br><br>
+            
+        <button class="btn btn-primary">Submit</button>
+       </form>
+      </div>
+      <br><br>
+      <div class="d-flex justify-content-center">
+        <div>
+        <div *ngFor="let x of z" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; max-width: 70vw;">
+          <h5  class="heading"><strong class="strong-heading"> Date : </strong> {{x.date}}</h5>
+          <h5  class="heading"><strong class="strong-heading"> Amount : </strong> {{x.amount}}</h5>
+          <h5  class="heading"><strong class="strong-heading"> Year : </strong> {{x.year}}</h5>
+          <hr style="height: 5px;">
+        </div>
+      </div>
+      <p style="color: red;" *ngIf="foundteacher"> * Data Not Found</p>
+      </div>
+      <br><br><br>
+  </div>
+   
+</div>
+    <br><br><br>
+    
+</div>

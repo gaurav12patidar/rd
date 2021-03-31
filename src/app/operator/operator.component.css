@@ -1,0 +1,14 @@
+@media screen and (max-width: 575px) {
+   #navbar{
+       display: unset;
+   }
+   .sidebar {
+      display: none;
+    }
+  }
+
+ @media screen and (min-width: 575px) {
+    #navbar{
+        display: none;
+    }
+  }

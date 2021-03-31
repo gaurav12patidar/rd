@@ -1,0 +1,758 @@
+
+<!-- ???????????????????? navbar at 600px............////////////////////////-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Rumpy Dumpy</a>
+       <button type="submit" (click)="logout()" style="margin: 2%;border-radius: 3%;border: 2px solid orange;color: orange;background-color: transparent;"> Log Out</button>
+           
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" style="cursor: pointer;">
+        <ul class="navbar-nav">
+            <h4>Student</h4>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="one()" class="list-group-item list-group-item-action bg-light">Add New Student</a>    
+          </li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="two()" class="list-group-item list-group-item-action bg-light">Update Student</a>
+           
+          </li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="three()" class="list-group-item list-group-item-action bg-light">Add Previous Year Records</a>
+          </li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="four()" class="list-group-item list-group-item-action bg-light">Update Previous Year</a>
+             </li>
+             <li data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <a (click)="five()" class="list-group-item list-group-item-action bg-light">Delete Previous Year</a>
+             </li>
+       <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+         <a (click)="nine()" class="list-group-item list-group-item-action bg-light">Add Fees And Cashflow</a>
+         </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <a (click)="ten()" class="list-group-item list-group-item-action bg-light">Add Installment Details</a>
+       </li>
+       <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a (click)="eleven()" class="list-group-item list-group-item-action bg-light">Remove Installment</a>
+ </li>
+ <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a (click)="twelve()" class="list-group-item list-group-item-action bg-light">Remove CashFlow</a>
+</li>
+<li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a (click)="thirteen()" class="list-group-item list-group-item-action bg-light">Add Report Card</a>
+</li>
+<li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a (click)="fourteen()" class="list-group-item list-group-item-action bg-light">Previous Document</a>
+</li >
+<li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a (click)="fifteen()" class="list-group-item list-group-item-action bg-light">Student SpreadSheet</a>
+    
+ </li>
+ <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a (click)="sixteen()" class="list-group-item list-group-item-action bg-light">Fees SpreadSheet</a>
+
+ </li>
+       <h4>Teacher</h4>
+       <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a (click)="one()" class="list-group-item list-group-item-action bg-light">Add New Teacher</a>
+          </li>
+         <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="two()" class="list-group-item list-group-item-action bg-light">Update Teacher</a>
+              </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="six()" class="list-group-item list-group-item-action bg-light">Add Previous Year Records</a>
+             </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="seven()" class="list-group-item list-group-item-action bg-light">Update Previous Year</a>
+        </li>
+        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a (click)="eight()" class="list-group-item list-group-item-action bg-light">Remove Previous Year</a>
+     </li>
+     <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a (click)="fourteen()" class="list-group-item list-group-item-action bg-light">Previous Document</a>
+              
+     </li>
+        </ul>
+        <button type="submit" (click)="navigateToTeacherGetStudentData()" style="margin: 2%;border-radius: 3%;border: 2px solid orange;color: orange;background-color: transparent;"> Search Student Or<br> Teacher Details </button>
+       
+      </div>
+    </div>
+  </nav>
+  
+
+<!-- Sidebar////////////////////////////////////////more than 600px -->
+<div class="row">
+    <div class="col-12 col-sm-3">
+        <div class="sidebar">
+            <div class="d-flex">
+        <div class=" bg-light border-right" id="sidebar-wrapper" style="overflow: auto;min-height: 100vh;" >
+           
+            <div class="sidebar-heading">Rumpy Dumpy</div>
+            <button type="submit" (click)="logout()" style="margin: 2%;border-radius: 3%;border: 2px solid orange;color: orange;background-color: transparent;"> Log Out</button>
+           
+            <br>
+            <h3>Student</h3>
+            <div class="list-group list-group-flush" style="cursor: pointer;">
+              <a (click)="one()" class="list-group-item list-group-item-action bg-light">Add New Student</a>
+              <a (click)="two()"class="list-group-item list-group-item-action bg-light">Update Student</a>
+              <a (click)="three()" class="list-group-item list-group-item-action bg-light">Add Previous Year Records</a>
+              <a (click)="four()" class="list-group-item list-group-item-action bg-light">Update Previous Year</a>
+              <a (click)="five()" class="list-group-item list-group-item-action bg-light">Delete Previous Year</a>
+              <a (click)="nine()" class="list-group-item list-group-item-action bg-light">Add Fees And Cashflow</a>
+              <a (click)="ten()" class="list-group-item list-group-item-action bg-light">Add Installment</a>
+              <a (click)="twelve()" class="list-group-item list-group-item-action bg-light">Remove Fees Cashflow</a>
+              <a (click)="eleven()" class="list-group-item list-group-item-action bg-light">Remove Installment</a>
+              <a (click)="thirteen()" class="list-group-item list-group-item-action bg-light">Add Report Card</a>
+              <a (click)="fourteen()" class="list-group-item list-group-item-action bg-light">Previous Document</a>
+              <a (click)="fifteen()" class="list-group-item list-group-item-action bg-light">Student SpreadSheet</a>
+              <a (click)="sixteen()" class="list-group-item list-group-item-action bg-light">Fees SpreadSheet</a>
+
+            
+            </div>
+            <h3>Teacher</h3>
+            <div class="list-group list-group-flush" style="cursor: pointer;">
+                <a (click)="one()" class="list-group-item list-group-item-action bg-light">Add New Teacher</a>
+                <a (click)="two()" class="list-group-item list-group-item-action bg-light">Update Teacher</a>
+                <a (click)="six()" class="list-group-item list-group-item-action bg-light">Add Previous Year Records</a>
+                <a (click)="seven()" class="list-group-item list-group-item-action bg-light">Update Previous Year</a>
+                <a (click)="eight()" class="list-group-item list-group-item-action bg-light">Remove Previous Year</a>
+                <a (click)="fourteen()" class="list-group-item list-group-item-action bg-light">Previous Document</a>
+                <button type="submit" (click)="navigateToTeacherGetStudentData()" style="margin: 2%;border-radius: 3%;border: 2px solid orange;color: orange;background-color: transparent;"> Search Student Or<br> Teacher Details </button>
+       
+            </div>
+          </div>
+        </div>
+        </div>
+        
+    </div>
+    <div class="col-12 col-sm-9">
+        <div class="container-fluid">
+            
+  <!-------------Forms  -->
+  
+  <!--Create Student Form-->
+  <div class="container" style="width: 80%;" *ngIf="fromOne">
+    <h1>Create New Student Or Teacher</h1>
+<form [formGroup]="createUserPrimaryform" (ngSubmit)="createNewStudent(createUserPrimaryform.value)">
+    <label> Name :  </label>
+        <input type="text" formControlName="name" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('name').touched && createUserPrimaryform.get('name').invalid }" class="form-control" placeholder="Enter Full Name" >
+        <div class="invalid-feedback"> <div>Name Required </div></div>
+    <br>
+    <label> Father's Name :  </label>
+            <input type="text" formControlName="father" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('father').touched && createUserPrimaryform.get('father').invalid }" class="form-control" placeholder="Enter Father's Name" >
+            <div class="invalid-feedback"> <div>Father's Name Required </div></div>
+        <br>
+    <label> Mother's Name :  </label>
+                <input type="text" formControlName="mother" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('mother').touched && createUserPrimaryform.get('mother').invalid }" class="form-control" placeholder="Enter Mother's Name" >
+                <div class="invalid-feedback"> <div>Mother's Name Required </div></div>
+            <br>
+    <label>  Address:  </label>
+                    <input type="text" formControlName="add" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('add').touched && createUserPrimaryform.get('add').invalid }" class="form-control" placeholder="Enter Address" >
+                    <div class="invalid-feedback"> <div>Address Required </div></div>
+                <br>
+    <label> Password:  </label>
+                        <input type="password" formControlName="password" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('password').touched && createUserPrimaryform.get('password').invalid }" class="form-control" placeholder="Enter Password" >
+                        <div class="invalid-feedback"> <div>Password Required </div></div>
+                    <br>
+    <label> Scholar Id :  </label>
+        <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('id').touched && createUserPrimaryform.get('id').invalid }" class="form-control" placeholder="Scholar Id" >
+        <div class="invalid-feedback"> <div>Id Required </div></div>
+        <br>
+    <label> Age :  </label>
+             <input type="number" formControlName="age" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('age').touched && createUserPrimaryform.get('age').invalid }" class="form-control" placeholder="Enter Age In Number" >
+             <div class="invalid-feedback"><div> Age Required</div></div>
+             <br>  
+    <label> Phone Number :  </label>
+             <input type="number" formControlName="phone" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('phone').touched && createUserPrimaryform.get('phone').invalid }" class="form-control" placeholder="Enter Phone Number" >
+             <div class="invalid-feedback"><div> Phone Number Required</div></div>
+             <br>        
+    <label> Year Of Joining :  </label>
+             <input type="number" formControlName="yoj" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('yoj').touched && createUserPrimaryform.get('yoj').invalid }" class="form-control" placeholder="Enter Year Of Joining" >
+             <div class="invalid-feedback"><div> Year Of Joining Required</div></div><br>
+    <label> Date Of Birth :  </label>
+             <input type="date" formControlName="dob" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('dob').touched && createUserPrimaryform.get('dob').invalid }" class="form-control" placeholder="Enter Date Of Birth " >
+             <div class="invalid-feedback"><div> Date Of Birth Required</div></div><br>
+    <label> Desigination :  </label><br><br>
+    <input type="radio" value='student' formControlName="role" >Student<br>
+  <input type="radio" value='master' formControlName="role">Teacher<br><br>
+        <!-- <input type="text" formControlName="role" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('role').touched && createUserPrimaryform.get('role').invalid }" class="form-control" placeholder="Enter Desigination (Student or Teacher) " >
+        <div class="invalid-feedback"><div> Role Required</div></div><br> -->
+    <label> Status :  </label><br><br>
+    <input type="radio" value='active' formControlName="status" >Active<br>
+  <input type="radio" value='deactive' formControlName="status">Deactive<br>   <br>     
+    <!-- <input type="text" formControlName="status" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('status').touched && createUserPrimaryform.get('status').invalid }" class="form-control" placeholder="Enter Status (Active Or Deactive)" >
+            <div class="invalid-feedback"><div> Status Required</div></div>
+            <br> -->
+    <label> Fees/Salary Status :  </label><br><br>
+    <input type="radio" value='paid' formControlName="amountstatus" >Paid<br>
+  <input type="radio" value='unpaid' formControlName="amountstatus">Unpaid<br>      
+    <!-- <input type="text" formControlName="amountstatus" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('amountstatus').touched && createUserPrimaryform.get('amountstatus').invalid }" class="form-control" placeholder="Enter Fees Status (Paid Or Unpaid)" >
+            <div class="invalid-feedback"><div>Fees Status Required</div></div>
+            <br> -->
+    <button class="btn btn-primary">Submit</button>
+   </form>
+</div>
+<!--
+    Student Form To Update////////////////////////////////////////////////////////////////////
+-->
+<div *ngIf="fromTwo">
+    <h1>Enter Id Which Is To Be Updated </h1>
+<form [formGroup]="updatePrimaryid" (ngSubmit)="getdatatoupdate(updatePrimaryid.value)">
+    <label> Scholar ID :  </label>
+    <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': updatePrimaryid.get('id').touched && updatePrimaryid.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+    <div class="invalid-feedback"> <div>Scholar Id Required </div></div>
+<br>
+<button class="btn btn-primary">Submit</button>
+
+</form>
+</div>
+<!--///////////////////////////////////////////////////////////////////////////////////////////-->
+<!--Update Student Form-->
+<div class="container" style="width: 80%;" *ngIf="fromUpdate">
+    <h1>Update Existing Student Or Teacher</h1>
+    <p>Only fill those fields which need to be updated, leave the rest fields empty</p>
+    <form [formGroup]="updatePrimaryform" (ngSubmit)="updateStudent(updatePrimaryform.value)">
+        <label> User ID :  </label>
+        <input type="text" formControlName="userid" [ngClass]="{ 'is-invalid': updatePrimaryform.get('userid').touched && updatePrimaryform.get('userid').invalid }" class="form-control" placeholder="Enter Your User Id" value = {{userid}} >
+        <div class="invalid-feedback"> <div>User Id Required </div></div>
+    <br>
+        <label> Name :  </label>
+            <input type="text" formControlName="name" [ngClass]="{ 'is-invalid': updatePrimaryform.get('name').touched && updatePrimaryform.get('name').invalid }" class="form-control" placeholder="Enter Name" value={{name}} >
+            <div class="invalid-feedback"> <div>Name Required </div></div>
+        <br>
+        <label> Father's Name :  </label>
+                <input type="text" formControlName="father" [ngClass]="{ 'is-invalid': updatePrimaryform.get('father').touched && updatePrimaryform.get('father').invalid }" class="form-control" placeholder="Enter Father's Name" value={{father}} >
+                <div class="invalid-feedback"> <div>Father's Name Required </div></div>
+            <br>
+        <label> Mother's Name :  </label>
+                    <input type="text" formControlName="mother" [ngClass]="{ 'is-invalid': updatePrimaryform.get('mother').touched && updatePrimaryform.get('mother').invalid }" class="form-control" placeholder="Enter Mother's Name" value={{mother}} >
+                    <div class="invalid-feedback"> <div>Mother's Name Required </div></div>
+                <br>
+        <label>  Address:  </label>
+                        <input type="text" formControlName="add" [ngClass]="{ 'is-invalid': updatePrimaryform.get('add').touched && updatePrimaryform.get('add').invalid }" class="form-control" placeholder="Enter Address" value={{add}} >
+                        <div class="invalid-feedback"> <div>Address Required </div></div>
+                    <br>
+        <label> Password:  </label>
+                            <input type="password" formControlName="password" [ngClass]="{ 'is-invalid': updatePrimaryform.get('password').touched && updatePrimaryform.get('password').invalid }" class="form-control" placeholder="Enter Password" value={{pass}} >
+                            <div class="invalid-feedback"> <div>Password Required </div></div>
+                        <br>
+        <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': updatePrimaryform.get('id').touched && updatePrimaryform.get('id').invalid }" class="form-control" placeholder="Scholar Id" value={{scholarno}}>
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Age :  </label>
+                 <input type="number" formControlName="age" [ngClass]="{ 'is-invalid': updatePrimaryform.get('age').touched && updatePrimaryform.get('age').invalid }" class="form-control" placeholder="Enter Age In Number" value={{age}}>
+                 <div class="invalid-feedback"><div> Age Required</div></div>
+                 <br>  
+        <label> Phone Number :  </label>
+                 <input type="number" formControlName="phone" [ngClass]="{ 'is-invalid': updatePrimaryform.get('phone').touched && updatePrimaryform.get('phone').invalid }" class="form-control" placeholder="Enter Phone Number" value={{phone}} >
+                 <div class="invalid-feedback"><div> Phone Number Required</div></div>
+                 <br>        
+        <label> Year Of Joining :  </label>
+                 <input type="number" formControlName="yoj" [ngClass]="{ 'is-invalid': updatePrimaryform.get('yoj').touched && updatePrimaryform.get('yoj').invalid }" class="form-control" placeholder="Enter Year Of Joining" value={{yoj}}>
+                 <div class="invalid-feedback"><div> Year Of Joining Required</div></div><br>
+        <label> Date Of Birth :  </label>
+                 <input type="date" formControlName="dob" [ngClass]="{ 'is-invalid': updatePrimaryform.get('dob').touched && updatePrimaryform.get('dob').invalid }" class="form-control" placeholder="Enter Date Of Birth " value={{dob}}>
+                 <div class="invalid-feedback"><div> Date Of Birth Required</div></div><br>
+        <label> Desigination :  </label><br><br>
+                 <input type="radio" value='student' formControlName="role" >Student<br>
+               <input type="radio" value='master' formControlName="role">Teacher<br><br>
+                     <!-- <input type="text" formControlName="role" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('role').touched && createUserPrimaryform.get('role').invalid }" class="form-control" placeholder="Enter Desigination (Student or Teacher) " >
+                     <div class="invalid-feedback"><div> Role Required</div></div><br> -->
+        <label> Status :  </label><br><br>
+                 <input type="radio" value='active' formControlName="status" >Active<br>
+               <input type="radio" value='deactive' formControlName="status">Deactive<br>   <br>     
+                 <!-- <input type="text" formControlName="status" [ngClass]="{ 'is-invalid': createUserPrimaryform.get('status').touched && createUserPrimaryform.get('status').invalid }" class="form-control" placeholder="Enter Status (Active Or Deactive)" >
+                         <div class="invalid-feedback"><div> Status Required</div></div>
+                         <br> -->
+        <label> Fees/Salary Status :  </label><br><br>
+                 <input type="radio" value='paid' formControlName="amountstatus" >Paid<br>
+               <input type="radio" value='unpaid' formControlName="amountstatus">Unpaid<br> 
+                <br>
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+     
+
+
+<!--Create Student Secondary From-->
+<div class="container" style="width: 80%;" *ngIf="fromThree">
+    <h1>Create Students Previous Years Data</h1>
+    <form [formGroup]="createUserSecondaryform" (ngSubmit)="createUserSecondary(createUserSecondaryform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': createUserSecondaryform.get('id').touched && createUserSecondaryform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Year :  </label>
+                 <input type="number" formControlName="year" [ngClass]="{ 'is-invalid': createUserSecondaryform.get('year').touched && createUserSecondaryform.get('year').invalid }" class="form-control" placeholder="Enter Year" >
+                 <div class="invalid-feedback"><div> Year Required</div></div>
+                 <br>  
+        <label> Class :  </label>
+                 <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': createUserSecondaryform.get('class').touched && createUserSecondaryform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+        <label> Percentage :  </label>
+                 <input type="text" formControlName="percentage" [ngClass]="{ 'is-invalid': createUserSecondaryform.get('percentage').touched && createUserSecondaryform.get('percentage').invalid }" class="form-control" placeholder="Enter Percentage" >
+                 <div class="invalid-feedback"> <div>Percentage Required </div></div>
+                 <br>
+        <label> Roll Number:  </label>
+                 <input type="number" formControlName="rollno" [ngClass]="{ 'is-invalid': createUserSecondaryform.get('rollno').touched && createUserSecondaryform.get('rollno').invalid }" class="form-control" placeholder="Enter Roll Number" >
+                 <div class="invalid-feedback"><div> Rollno Required</div></div>
+                 <br> 
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+<!--
+    Student Secondary Form To Update////////////////////////////////////////////////////////////////////
+-->
+<div *ngIf="fromFour">
+    <h1>Enter Id Which Is To Be Updated </h1>
+<form [formGroup]="updatePrimaryid" (ngSubmit)="getdatatoupdateSecStu(updatePrimaryid.value)">
+    <label> Scholar ID :  </label>
+    <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': updatePrimaryid.get('id').touched && updatePrimaryid.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+    <div class="invalid-feedback"> <div>Scholar Id Required </div></div>
+<br>
+<button class="btn btn-primary">Submit</button>
+
+</form>
+</div>     
+
+<!--Update Student Secondary From-->
+<div class="container" style="width: 80%;" *ngIf="fromupdateSecStu">
+    <h1>Update Existing Students Previous Years Data</h1>
+    <p>Only fill those fields which need to be updated, leave the rest fields empty</p>
+  
+    <form [formGroup]="updateSecondaryStudentDataform" (ngSubmit)="updateUserSecondary(updateSecondaryStudentDataform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': updateSecondaryStudentDataform.get('id').touched && updateSecondaryStudentDataform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Year :  </label>
+                 <input type="number" formControlName="year" [ngClass]="{ 'is-invalid': updateSecondaryStudentDataform.get('year').touched && updateSecondaryStudentDataform.get('year').invalid }" class="form-control" placeholder="Enter Year" >
+                 <div class="invalid-feedback"><div> Year Required</div></div>
+                 <br>  
+        <label> Class :  </label>
+                 <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': updateSecondaryStudentDataform.get('class').touched && updateSecondaryStudentDataform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+        <label> Percentage :  </label>
+                 <input type="text" formControlName="percentage" [ngClass]="{ 'is-invalid': updateSecondaryStudentDataform.get('percentage').touched && updateSecondaryStudentDataform.get('percentage').invalid }" class="form-control" placeholder="Enter Percentage" >
+                 <div class="invalid-feedback"> <div>Percentage Required </div></div>
+                 <br>
+        <label> Roll Number:  </label>
+                 <input type="number" formControlName="rollno" [ngClass]="{ 'is-invalid': updateSecondaryStudentDataform.get('rollno').touched && updateSecondaryStudentDataform.get('rollno').invalid }" class="form-control" placeholder="Enter Roll Number" >
+                 <div class="invalid-feedback"><div> Rollno Required</div></div>
+                 <br> 
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+     
+
+<!--Delete Student Secondary From-->
+<div class="container" style="width: 80%;" *ngIf="fromFive">
+    <h1>Delete Student's Previous Years Data</h1>
+    
+    <form [formGroup]="removeSecondaryStudentDataform" (ngSubmit)="removeSecondaryDataStudent(removeSecondaryStudentDataform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': removeSecondaryStudentDataform.get('id').touched && removeSecondaryStudentDataform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Class :  </label>
+                 <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': removeSecondaryStudentDataform.get('class').touched && removeSecondaryStudentDataform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+
+<!--Create Teacher Secondary From-->
+<div class="container" style="width: 80%;" *ngIf="fromSix">
+    <h1>Create Teacher's Previous Years Data</h1>
+    <form [formGroup]="createUserSecondaryTeacherform" (ngSubmit)="createTeacherSecondary(createUserSecondaryTeacherform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': createUserSecondaryTeacherform.get('id').touched && createUserSecondaryTeacherform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Year :  </label>
+                 <input type="number" formControlName="year" [ngClass]="{ 'is-invalid': createUserSecondaryTeacherform.get('year').touched && createUserSecondaryTeacherform.get('year').invalid }" class="form-control" placeholder="Enter Year" >
+                 <div class="invalid-feedback"><div> Year Required</div></div>
+                 <br>  
+        <label> Classes :  </label>
+                 <input type="text" formControlName="classes" [ngClass]="{ 'is-invalid': createUserSecondaryTeacherform.get('classes').touched && createUserSecondaryTeacherform.get('classes').invalid }" class="form-control" placeholder="Enter Classes" >
+                 <div class="invalid-feedback"> <div>Classes Required </div></div>
+                 <br>
+        <label> Administrator Of :  </label>
+                 <input type="text" formControlName="admin" [ngClass]="{ 'is-invalid': createUserSecondaryTeacherform.get('admin').touched && createUserSecondaryTeacherform.get('admin').invalid }" class="form-control" placeholder="Enter Administrator Of - " >
+                 <div class="invalid-feedback"> <div>Administrator Of Required </div></div>
+                 <br>
+         <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+     
+
+
+<!--Update Teacher Secondary From-->
+<div class="container" style="width: 80%;" *ngIf="fromSeven">
+    <h1>Update Existing Teacher's Previous Years Data</h1>
+    <p>Only fill those fields which need to be updated, leave the rest fields empty</p>
+   
+    <form [formGroup]="updateTeacherYearform" (ngSubmit)="updateTeacherYear(updateTeacherYearform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': updateTeacherYearform.get('id').touched && updateTeacherYearform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Year :  </label>
+                 <input type="number" formControlName="year" [ngClass]="{ 'is-invalid': updateTeacherYearform.get('year').touched && updateTeacherYearform.get('year').invalid }" class="form-control" placeholder="Enter Year" >
+                 <div class="invalid-feedback"><div> Year Required</div></div>
+                 <br>  
+        <label> Classes :  </label>
+                 <input type="text" formControlName="classes"  class="form-control" placeholder="Enter Classes" >
+                     <br>
+        <label> Administrator Of :  </label>
+                 <input type="text" formControlName="admin"  class="form-control" placeholder="Enter Administrator Of - " >
+                        <br>
+         <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+     
+    
+<!--Delete Student's Previous From-->
+<div class="container" style="width: 80%;" *ngIf="fromEight">
+    <h1>Delete Teacher's Previous Years Data</h1>
+    <form [formGroup]="removeSecondaryTeacherDataform" (ngSubmit)="removeTeacherYear(removeSecondaryTeacherDataform.value)">
+       <label> Teacher's Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': removeSecondaryTeacherDataform.get('id').touched && removeSecondaryTeacherDataform.get('id').invalid }" class="form-control" placeholder="Enter Teacher's Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Year :  </label>
+                 <input type="text" formControlName="year" [ngClass]="{ 'is-invalid': removeSecondaryTeacherDataform.get('year').touched && removeSecondaryTeacherDataform.get('year').invalid }" class="form-control" placeholder="Enter Year" >
+                 <div class="invalid-feedback"> <div>Year Required </div></div>
+                 <br>
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+
+
+    
+<!--Student CashFlow Form-->
+<div class="container" style="width: 80%;" *ngIf="fromNine">
+    <h1>Student's Fees And Cashflow</h1>
+    <form [formGroup]="createStudentCashflowform" (ngSubmit)="createStudentCashflow(removeSecondaryTeacherDataform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': createStudentCashflowform.get('id').touched && createStudentCashflowform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Class :  </label>
+                 <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': createStudentCashflowform.get('class').touched && createStudentCashflowform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+        <label> Installment :  </label>
+                 <input type="text" formControlName="installment" [ngClass]="{ 'is-invalid': createStudentCashflowform.get('installment').touched && createStudentCashflowform.get('installment').invalid }" class="form-control" placeholder="Enter Installment" >
+                 <div class="invalid-feedback"> <div>Installment Required </div></div>
+                 <br>        
+        <label> Recieptno :  </label>
+                 <input type="text" formControlName="recieptno" [ngClass]="{ 'is-invalid': createStudentCashflowform.get('recieptno').touched && createStudentCashflowform.get('recieptno').invalid }" class="form-control" placeholder="Enter Recieptno" >
+                 <div class="invalid-feedback"> <div>Recieptno Required </div></div>
+                 <br>      
+        <label> Date :  </label>
+                 <input type="date" formControlName="date" [ngClass]="{ 'is-invalid': createStudentCashflowform.get('date').touched && createStudentCashflowform.get('date').invalid }" class="form-control" placeholder="Enter Date " >
+                 <div class="invalid-feedback"><div> Date Required</div></div><br>
+        <label> Amount :  </label>
+                 <input type="number" formControlName="amount" [ngClass]="{ 'is-invalid': createStudentCashflowform.get('amount').touched && createStudentCashflowform.get('amount').invalid }" class="form-control" placeholder="Enter Amount" >
+                 <div class="invalid-feedback"> <div>Amount Required </div></div>
+                 <br>                               
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+
+<!--Student Installment Form-->
+<div class="container" style="width: 80%;" *ngIf="fromTen">
+    <h1>Student's Installment</h1>
+    <form [formGroup]="createStudentInstallmentform" (ngSubmit)="createStudentInstallment(createStudentInstallmentform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': createStudentInstallmentform.get('id').touched && createStudentInstallmentform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Class :  </label>
+                 <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': createStudentInstallmentform.get('class').touched && createStudentInstallmentform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+        <label> Installment :  </label>
+                 <input type="text" formControlName="installment" [ngClass]="{ 'is-invalid': createStudentInstallmentform.get('installment').touched && createStudentInstallmentform.get('installment').invalid }" class="form-control" placeholder="Enter Installment" >
+                 <div class="invalid-feedback"> <div>Installment Required </div></div>
+                 <br>        
+        <label> Recieptno :  </label>
+                 <input type="text" formControlName="recieptno" [ngClass]="{ 'is-invalid': createStudentInstallmentform.get('recieptno').touched && createStudentInstallmentform.get('recieptno').invalid }" class="form-control" placeholder="Enter Recieptno" >
+                 <div class="invalid-feedback"> <div>Recieptno Required </div></div>
+                 <br>      
+        <label> Date :  </label>
+                 <input type="date" formControlName="date" [ngClass]="{ 'is-invalid': createStudentInstallmentform.get('date').touched && createStudentInstallmentform.get('date').invalid }" class="form-control" placeholder="Enter Date " >
+                 <div class="invalid-feedback"><div> Date Required</div></div><br>
+        <label> Amount :  </label>
+                 <input type="number" formControlName="amount" [ngClass]="{ 'is-invalid': createStudentInstallmentform.get('amount').touched && createStudentInstallmentform.get('amount').invalid }" class="form-control" placeholder="Enter Amount" >
+                 <div class="invalid-feedback"> <div>Amount Required </div></div>
+                 <br>                               
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+
+<!--Remove Installment Form-->
+<div class="container" style="width: 80%;" *ngIf="fromEleven">
+    <h1>Remove Student's Installment</h1>
+    <form [formGroup]="removeStudentInstallmentform" (ngSubmit)="removeStudentInstallment(removeStudentInstallmentform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': removeStudentInstallmentform.get('id').touched && removeStudentInstallmentform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Class :  </label>
+            <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': removeStudentInstallmentform.get('class').touched && removeStudentInstallmentform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+            <div class="invalid-feedback"> <div>Class Required </div></div>
+            <br>    
+        <label> Installment :  </label>
+                 <input type="text" formControlName="installment" [ngClass]="{ 'is-invalid': removeStudentInstallmentform.get('installment').touched && removeStudentInstallmentform.get('installment').invalid }" class="form-control" placeholder="Enter Installment" >
+                 <div class="invalid-feedback"> <div>Installment Required </div></div>
+                 <br>        
+                                    
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+
+
+<!--Remove Cashflow Form-->
+<div class="container" style="width: 80%;" *ngIf="fromTwelve">
+    <h1>Remove Student's Cashflow</h1>
+    <form [formGroup]="removeStudentYearcashflowform" (ngSubmit)="removeStudentCashflow(removeStudentYearcashflowform.value)">
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': removeStudentYearcashflowform.get('id').touched && removeStudentYearcashflowform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Class :  </label>
+            <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': removeStudentYearcashflowform.get('class').touched && removeStudentYearcashflowform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+            <div class="invalid-feedback"> <div>Class Required </div></div>
+            <br>    
+               
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+
+<!--Add Report Card Form-->
+<div class="container" style="width: 80%;" *ngIf="fromThirteen">
+    <h1>Add Report Card </h1>
+    <form [formGroup]="addReportCardform" (ngSubmit)="addReportCardDetails(addReportCardform.value)" (ngSubmit)="onupload()" >
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': addReportCardform.get('id').touched && addReportCardform.get('id').invalid }" class="form-control" placeholder="Enter Scholar Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        <label> Class :  </label>
+            <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': addReportCardform.get('class').touched && addReportCardform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+            <div class="invalid-feedback"> <div>Class Required </div></div>
+            <br>    
+            <input type="file" (change)="fileSelected($event)">      
+        <button class="btn btn-primary" >Submit</button>
+        <p>Document Preview</p>
+        <img [src]="imagebuffer" style="max-height: auto;max-width: 50%;">
+       </form>
+    </div>
+
+    
+<!--Add Previous Org Doc Form-->
+<div class="container" style="width: 80%;" *ngIf="fromFourteen">
+    <h1>Add Previous Organisation </h1>
+    <form [formGroup]="addPreviousOrgform" (ngSubmit)="addPreviousOrgDocDetails(addPreviousOrgform.value)" (ngSubmit)="onuploadDoc()" >
+       <label> Scholar Id :  </label>
+            <input type="text" formControlName="id" [ngClass]="{ 'is-invalid': addPreviousOrgform.get('id').touched && addPreviousOrgform.get('id').invalid }" class="form-control" placeholder="Enter Unique Id" >
+            <div class="invalid-feedback"> <div>Id Required </div></div>
+            <br>
+        
+            <input type="file" (change)="fileSelected($event)">      
+        <button class="btn btn-primary" >Submit</button>
+        <p>Document Preview</p>
+        <img [src]="imagebuffer" style="max-height: auto;max-width: 50%;">
+       </form>
+    </div>
+
+
+<!--Get Student SpreadSheet Url //////////////////////////////////////////////-->
+<div class="container" style="width: 80%;" *ngIf="fromFifteen">
+    <h1>Create A Spreadsheet</h1>
+    
+    <form [formGroup]="studentspreadsheetform" (ngSubmit)="getStudentSpreadsheet(studentspreadsheetform.value)">
+       <label> Sheetname :  </label>
+            <input type="text" formControlName="sheetname" [ngClass]="{ 'is-invalid': studentspreadsheetform.get('sheetname').touched && studentspreadsheetform.get('sheetname').invalid }" class="form-control" placeholder="Give a name to your SpreadSheet" >
+            <div class="invalid-feedback"> <div>*Sheetname Required </div></div>
+            <br>
+        <label> Year :  </label>
+                 <input type="number" formControlName="year" [ngClass]="{ 'is-invalid': studentspreadsheetform.get('year').touched && studentspreadsheetform.get('year').invalid }" class="form-control" placeholder="Enter Year" >
+                 <div class="invalid-feedback"><div> Year Required</div></div>
+                 <br>  
+        <label> Class :  </label>
+                 <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': studentspreadsheetform.get('class').touched && studentspreadsheetform.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+                 <p>Select All Categories You Want In Your Sheet</p>
+        <label> Report Card Url : &nbsp;&nbsp; </label>
+                 <input type="checkbox" formControlName="reportcardurl"  class="form-check-input"  >
+                   <br> 
+        <label> Percentage : &nbsp;&nbsp; </label>
+                 <input type="checkbox"  formControlName="percentage" class="form-check-input" >
+                 <br>
+        <label> Username :  &nbsp;&nbsp;</label>
+                 <input type="checkbox" formControlName="username"  class="form-check-input"  >
+                   <br>
+        <label> Status:  &nbsp;&nbsp;</label>
+                 <input type="checkbox" formControlName="status"  class="form-check-input"  >
+                   <br>  
+        <label> Amount Status : &nbsp;&nbsp; </label>
+                   <input type="checkbox" formControlName="amountstatus"  class="form-check-input"  >
+                     <br>  
+        <label> Desigination :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="role" class="form-check-input"> 
+                    <br>   
+        <label> User ID :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="userid" class="form-check-input"> 
+                    <br>        
+                    <label> Father's Name :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="father" class="form-check-input"> 
+                    <br> 
+                    <label> Year Of Joining :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="yoj" class="form-check-input"> 
+                    <br> 
+                    <label> Date Of Birth :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="dob" class="form-check-input"> 
+                    <br> 
+                    <label> Address :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="add" class="form-check-input"> 
+                    <br> 
+
+                    <label> Phone Number :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="phone" class="form-check-input"> 
+                    <br> 
+                    <label> Mother's Name :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="mother" class="form-check-input"> 
+                    <br> 
+                    <label> Age :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="age" class="form-check-input"> 
+                    <br> 
+                    <label> Previous Organisation Document :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="previousorgdoc" class="form-check-input"> 
+                    <br> 
+                    <label> Roll Number :  &nbsp;&nbsp;</label>
+                    <input type="checkbox" formControlName="rollno" class="form-check-input"> 
+                    <br> 
+                     
+        <label> Google SpreadSheet Url  :  </label>
+                   <input type="text" formControlName="googlespreadsheeturl"  class="form-control" placeholder="Enter googlespreadsheeturl (If Required)" >
+                     <br>                     
+        <button class="btn btn-primary">Submit</button>
+       </form>
+    </div>
+<br>
+<div class="row" *ngIf="viewsheet">
+    <div class="col-6"><a href="{{downolad}}">Click Here To Download SpreedSheet</a></div>
+    <div class="col-6"><a href="{{justview}}">Click Here To View SpreadSheet</a></div>
+</div>
+<br><br><br><br>
+<!--Get Fees SpreadSheet Url //////////////////////////////////////////////-->
+<div class="container" style="width: 80%;" *ngIf="fromSixteen">
+    <h1>Create A Fees Spreadsheet</h1>
+    
+    <form [formGroup]="feesspreadsheet" (ngSubmit)="getStudentFeesSpreadsheet(feesspreadsheet.value)">
+       <label> Sheetname :  </label>
+            <input type="text" formControlName="sheetname" [ngClass]="{ 'is-invalid': feesspreadsheet.get('sheetname').touched && feesspreadsheet.get('sheetname').invalid }" class="form-control" placeholder="Give a name to your SpreadSheet" >
+            <div class="invalid-feedback"> <div>*Sheetname Required </div></div>
+            <br>
+        <label> Year :  </label>
+                 <input type="number" formControlName="year" [ngClass]="{ 'is-invalid': feesspreadsheet.get('year').touched && feesspreadsheet.get('year').invalid }" class="form-control" placeholder="Enter Year" >
+                 <div class="invalid-feedback"><div> Year Required</div></div>
+                 <br>  
+        <label> Class :  </label>
+                 <input type="text" formControlName="class" [ngClass]="{ 'is-invalid': feesspreadsheet.get('class').touched && feesspreadsheet.get('class').invalid }" class="form-control" placeholder="Enter Class" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+         <label> Number Of Installments :  </label>
+                 <input type="text" formControlName="noofinstallments" [ngClass]="{ 'is-invalid': feesspreadsheet.get('noofinstallments').touched && feesspreadsheet.get('noofinstallments').invalid }" class="form-control" placeholder="Enter No of installments" >
+                 <div class="invalid-feedback"> <div>Class Required </div></div>
+                 <br>
+       
+                   <p>Select All Categories You Want In Your Sheet</p>
+                   
+                   <label> Report Card Url : &nbsp;&nbsp; </label>
+                            <input type="checkbox" formControlName="reportcardurl"  class="form-check-input"  >
+                              <br> 
+                   <label> Percentage : &nbsp;&nbsp; </label>
+                            <input type="checkbox"  formControlName="percentage" class="form-check-input" >
+                            <br>
+                   <label> Username :  &nbsp;&nbsp;</label>
+                            <input type="checkbox" formControlName="username"  class="form-check-input"  >
+                              <br>
+                   <label> Status:  &nbsp;&nbsp;</label>
+                            <input type="checkbox" formControlName="status"  class="form-check-input"  >
+                              <br>  
+                   <label> Amount Status : &nbsp;&nbsp; </label>
+                              <input type="checkbox" formControlName="amountstatus"  class="form-check-input"  >
+                                <br>  
+                   <label> Desigination :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="role" class="form-check-input"> 
+                               <br>   
+                   <label> User ID :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="userid" class="form-check-input"> 
+                               <br>        
+                               <label> Father's Name :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="father" class="form-check-input"> 
+                               <br> 
+                               <label> Year Of Joining :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="yoj" class="form-check-input"> 
+                               <br> 
+                               <label> Date Of Birth :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="dob" class="form-check-input"> 
+                               <br> 
+                               <label> Address :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="add" class="form-check-input"> 
+                               <br> 
+           
+                               <label> Phone Number :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="phone" class="form-check-input"> 
+                               <br> 
+                               <label> Mother's Name :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="mother" class="form-check-input"> 
+                               <br> 
+                               <label> Age :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="age" class="form-check-input"> 
+                               <br> 
+                               <label> Previous Organisation Document :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="previousorgdoc" class="form-check-input"> 
+                               <br> 
+                               <label> Roll Number :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="rollno" class="form-check-input"> 
+                               <br>     
+                               <label> Date :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="date" class="form-check-input"> 
+                               <br> 
+                               <label> Reciept Number :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="recieptno" class="form-check-input"> 
+                               <br> 
+                               <label> Amount :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="amount" class="form-check-input"> 
+                               <br> 
+                               <label> Scholar Number :  &nbsp;&nbsp;</label>
+                               <input type="checkbox" formControlName="scholarno" class="form-check-input"> 
+                               <br>
+                               <button class="btn btn-primary">Submit</button>
+                               <div class="row" *ngIf="viewsheetfees">
+                                <div class="col-6"><a href="{{downoladfees}}">Click Here To Download SpreedSheet</a></div>
+                                <div class="col-6"><a href="{{justviewfees}}">Click Here To View SpreadSheet</a></div>
+                            </div>
+                            <br><br><br><br>
+       </form>
+    </div>
+
+
+
+
+
+    </div>
+
+</div>
+
+

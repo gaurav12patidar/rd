@@ -1,0 +1,18 @@
+#body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right,rgb(5, 5, 107),rgb(150, 50, 150),rgb(5, 5, 107));
+    border: solid orange 7px;
+}
+#heading{
+    margin-top: 10vh;
+    color: orange;
+    letter-spacing: 2px;
+    font-family: 'Redressed', cursive;
+    font-size: 40px;
+}
+#heading-para{
+    font-family: 'Dancing Script', cursive;
+    color:orange;
+    margin-top: 7vh;
+}
